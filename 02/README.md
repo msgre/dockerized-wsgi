@@ -10,16 +10,16 @@ Details:
 
 # Build
 
-docker build -t msgre/common:wsgi.02-python -f Dockerfile.python .
-docker build -t msgre/common:wsgi.02-nginx -f Dockerfile.nginx .
+    docker build -t msgre/common:wsgi.02-python -f Dockerfile.python .
+    docker build -t msgre/common:wsgi.02-nginx -f Dockerfile.nginx .
 
 # Run
 
-docker run --name wsgi --rm -ti -p 8080:8080 msgre/common:wsgi.02-python
-docker run --link wsgi --name nginx --rm -ti -p 9000:80 msgre/common:wsgi.02-nginx
+    docker run --name wsgi --rm -ti -p 8080:8080 msgre/common:wsgi.02-python
+    docker run --link wsgi --name nginx --rm -ti -p 9000:80 msgre/common:wsgi.02-nginx
 
 # Watch
 
-http://192.168.99.100:9000/
+    http://192.168.99.100:9000/
 
 (IP address on your machine could be different, run `docker-machine ip default` to see yours)
