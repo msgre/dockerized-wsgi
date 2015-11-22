@@ -1,0 +1,12 @@
+---
+wsgi:
+  image: msgre/common:wsgi.02-python
+  ports:
+    - "8080:8080"
+
+nginx:
+  image: msgre/common:wsgi.02-nginx
+  links:
+    - wsgi
+  ports: 
+    - "9000:80"

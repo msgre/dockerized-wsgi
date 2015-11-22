@@ -5,6 +5,8 @@ Two ways how to Dockerize Python application and connect it to Nginx via uwsgi.
 * [02/](02)  
   Two containers. One with Python app and uwsgi, second with Nginx. In this way
   you could have many apps on single node and just one connected Nginx.
+* [03/](03)  
+  Same as 02, but livecycle of containers managed with Docker Compose tool.
 
 Follow instructions in subdirectories.
 
